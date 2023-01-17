@@ -3,7 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>eRuang</title>
+
+  <style type="text/css">
+  .search-right {
+    padding-right: 40px;
+    right: 0;
+    position: fixed; 
+  }
+  </style>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -37,7 +45,15 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Admin eRuang - Sistem Peminjam Ruangan Nurul Fikri</a>
+      </li>
+      <li class="nav-item search-right">
+        <div class="input-group rounded">
+          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          <span class="input-group-text border-0" id="search-addon">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
       </li>
     </ul>
   </nav>
@@ -46,9 +62,9 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="../dist/img/logo.png" alt="eCarRental Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">eCarRental</span>
+    <a href="../index.html" class="brand-link">
+      <img src="../dist/img/logo-eruang.png" alt="eRuang Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">eRuang</span>
     </a>
 
     <!-- Sidebar -->
@@ -82,32 +98,40 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-car"></i>
+              <i class="nav-icon fas fa-building"></i>
               <p>
-                Kendaraan
+                Ruangan
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="kendaraan.html" class="nav-link active">
+                <a href="ruangan.html" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
-                  <p>Tabel Kendaraan</p>
+                  <p>Daftar Ruangan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="form-kendaraan.html" class="nav-link">
+                <a href="kelola-ruangan.html" class="nav-link active">
                   <i class="fas fa-list nav-icon"></i>
-                  <p>Form Kendaraan</p>
+                  <p>Kelola Ruangan</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
             <a href="peminjam.html" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+              <i class="nav-icon fas fa-child"></i>
               <p>
                 Peminjam
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Logout
               </p>
             </a>
           </li>
@@ -125,12 +149,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Tabel Kendaraan</h1>
+            <h1 class="m-0">Kelola Ruangan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Tabel Kendaraan</li>
+              <li class="breadcrumb-item"><a href="#">Admin</a></li>
+              <li class="breadcrumb-item active">Kelola Ruangan</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -143,36 +167,65 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">Nama Kendaraan</th>
-                  <th scope="col">Kategori</th>
-                  <th scope="col">Fasilitas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Budiman</td>
-                  <td>Bus</td>
-                  <td>Sound, TV, Wifi</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Budiman</td>
-                  <td>Bus</td>
-                  <td>Sound, TV, Wifi</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Budiman</td>
-                  <td>Bus</td>
-                  <td>Sound, TV, Wifi</td>
-                </tr>
-              </tbody>
-            </table>
+            <form>
+              <div class="form-group row">
+                <label for="ruangan" class="col-4 col-form-label">Nama Rungan</label> 
+                <div class="col-8">
+                  <input id="ruangan" name="ruangan" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="kategori" class="col-4 col-form-label">Kategori Ruangan</label> 
+                <div class="col-8">
+                  <select id="kategori" name="kategori" class="custom-select">
+                    <option value="Aula">Aula</option>
+                    <option value="Lapangan">Lapangan</option>
+                    <option value="Kolam Renang">Kolam Renang</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="deskripsi" class="col-4 col-form-label">Deskripsi Ruangan</label> 
+                <div class="col-8">
+                  <textarea id="deskripsi" name="deskripsi" cols="40" rows="5" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-4">Fasilitas Ruangan</label> 
+                <div class="col-8">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="fasilitas" id="fasilitas_0" type="radio" class="custom-control-input" value="Sound System"> 
+                    <label for="fasilitas_0" class="custom-control-label">Sound System</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="fasilitas" id="fasilitas_1" type="radio" class="custom-control-input" value="Wifi"> 
+                    <label for="fasilitas_1" class="custom-control-label">Wifi</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="fasilitas" id="fasilitas_2" type="radio" class="custom-control-input" value="Layar Besar"> 
+                    <label for="fasilitas_2" class="custom-control-label">Layar Besar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="kapasitas" class="col-4 col-form-label">Kapasitas Ruangan</label> 
+                <div class="col-8">
+                  <input id="kapasitas" name="kapasitas" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="lokasi" class="col-4 col-form-label">Lokasi Ruangan</label> 
+                <div class="col-8">
+                  <input id="lokasi" name="lokasi" type="text" class="form-control">
+                </div>
+              </div> 
+              <div class="form-group row">
+                <div class="offset-4 col-8">
+                  <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                  <button name="reset" type="reset" class="btn btn-warning">Reset</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -181,10 +234,10 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="#">eCarRental</a>.</strong>
+    <strong>Copyright &copy; 2023 <a href="#">eRuang</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Create By</b> Kelompok SI04
+      <b>Create By</b> Kelompok 1 - SI04
     </div>
   </footer>
 
