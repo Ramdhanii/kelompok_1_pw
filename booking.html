@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>eRuang</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo-eruang.png" rel="icon">
+  <link href="assets/img/logo-eruang.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: EstateAgency - v4.10.0
+  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Property Search Section ======= -->
+  <div class="click-closed"></div>
+  <!--/ Form Search Star /-->
+  <div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">Search Property</h3>
+    </div>
+    <span class="close-box-collapse right-boxed bi bi-x"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Keyword</label>
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Cari Ruangan</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div><!-- End Property Search Section -->
+
+  <!-- ======= Header/Navbar ======= -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" href="index.html"><img src="assets/img/logo-eruang.png" style="width: 50px;" alt=""> E<span class="color-b">Ruang</span></a>
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="fasilitas.html">Fasilitas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="booking.html">Booking</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="berita.html">Berita</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="kontak.html">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+
+      <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+        <i class="bi bi-search"></i>
+      </button>
+
+      <a href="admin/pages/login.html" class="btn btn-outline-success" style="margin-left: 40px;">Login</a>
+
+    </div>
+  </nav><!-- End Header/Navbar -->
+
+  <main id="main">
+
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">Booking Ruangan</h1>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Booking
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <form class="mt-4">
+            <div class="form-group row">
+              <label for="text" class="col-4 col-form-label">Nama Peminjam</label> 
+              <div class="col-8">
+                <input id="text" name="text" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label for="select" class="col-4 col-form-label">Nama Ruangan</label> 
+              <div class="col-8">
+                <select id="select" name="select" class="form-control">
+                  <option value="Aula Cendrawasih">Aula Cendrawasih</option>
+                  <option value="Meeting Room Garuda">Meeting Room Garuda</option>
+                  <option value="Conference Room Nuri">Conference Room Nuri</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label for="textarea" class="col-4 col-form-label">Deskripsi Kegiatan</label> 
+              <div class="col-8">
+                <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label class="col-4">Fasilitas Tambahan</label> 
+              <div class="col-8">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input name="checkbox" id="checkbox_0" type="checkbox" class="custom-control-input" value="Sound System"> 
+                  <label for="checkbox_0" class="custom-control-label">Sound System</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input name="checkbox" id="checkbox_1" type="checkbox" class="custom-control-input" value="Wifi"> 
+                  <label for="checkbox_1" class="custom-control-label">Wifi</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input name="checkbox" id="checkbox_2" type="checkbox" class="custom-control-input" value="Layar Besar"> 
+                  <label for="checkbox_2" class="custom-control-label">Layar Besar</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input name="checkbox" id="checkbox_3" type="checkbox" class="custom-control-input" value="Katering"> 
+                  <label for="checkbox_3" class="custom-control-label">Katering</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label for="tanggal" class="col-4 col-form-label">Tanggal Pinjam</label> 
+              <div class="col-8">
+                <input id="tanggal" name="tanggal" type="date" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label for="kontak" class="col-4 col-form-label">Kontak Person</label> 
+              <div class="col-8">
+                <input id="kontak" name="kontak" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label for="telpon" class="col-4 col-form-label">Telpon/HP</label> 
+              <div class="col-8">
+                <input id="telpon" name="telpon" type="number" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row mt-4">
+              <label for="email" class="col-4 col-form-label">Email</label> 
+              <div class="col-8">
+                <input id="email" name="email" type="email" class="form-control">
+              </div>
+            </div> 
+            <div class="form-group row mt-4">
+              <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                <button name="reset" type="reset" class="btn btn-danger">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section><!-- End Intro Single-->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <section class="section-footer">
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="nav-footer">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Fasilitas</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Booking</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Berita</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Tentang Kami</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="socials-a">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              &copy; Copyright
+              <span class="color-a">eRuang</span> All Rights Reserved.
+            </p>
+          </div>
+          <div class="credits">
+            <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
+          -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
